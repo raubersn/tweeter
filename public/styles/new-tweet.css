@@ -34,9 +34,13 @@
   padding-right: 15px;
 }
 
-.new-tweet output {
+.counter {
   font-family: Bungee, sans-serif;
   font-weight: bold;
+}
+
+.counter-exceed {
+  color: red;
 }
 
 .new-tweet label {
