@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/timeline.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -39,29 +40,56 @@
       </span>
     </nav>
 
-    <header>
+    <header class="main-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <div>
           <h2>Your Name</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container" style="align-items: center;">
+    <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="post" enctype="application/x-www-form-urlencoded">
           <span>
             <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
+            <textarea name="text" id="tweet-text" class="tweet-message"></textarea>
           </span>
           <div>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="timeline">
+        <article class="tweet">
+          <header>
+            <span>
+              <img src="https://i.imgur.com/73hZDYK.png"> Newton
+            </span>
+            <span>
+              @SirIsaac
+            </span>
+          </header>
+          <section class="tweet-message">
+            <span>
+              If I have seen further it is by standing on the shoulders of giants
+            </span>
+          </section>
+          <footer>
+            <span>
+              10 days ago
+            </span>
+            <span>
+              <i class="fa-solid fa-flag fa-sm"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-sharp fa-solid fa-heart fa-sm"></i>
+            </span>
+          </footer>
+        </article>
       </section>
     </main>
   </body>

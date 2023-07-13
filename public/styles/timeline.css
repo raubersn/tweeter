@@ -1,0 +1,28 @@
+.timeline {
+padding-top: 40px;
+}
+
+.tweet {
+  display: flex;
+  flex-direction: column;
+  border: 3px;
+  border-style: groove;
+  padding: 1em;
+}
+
+.tweet header {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet footer {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: small;
+}
