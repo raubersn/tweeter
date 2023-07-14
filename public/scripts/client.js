@@ -17,7 +17,7 @@ return $(`<article class="tweet">
             <span>${tweet.content.text}</span>
           </section>
           <footer>
-            <span>${tweet.created_at} days ago</span>
+            <span>${timeago.format(tweet.created_at)}</span>
             <span>
               <i class="fa-solid fa-flag fa-lg"></i>
               <i class="fa-solid fa-retweet fa-lg"></i>
@@ -38,8 +38,6 @@ const renderTweets = (tweets) => {
 };
 
 const loadTweets = () => {
-  //$.get("/tweets");
-
   $.ajax('/tweets', { method: 'GET' })
   .then(function (tweetsJSON) {
     renderTweets(tweetsJSON);
