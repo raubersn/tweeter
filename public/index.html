@@ -56,7 +56,7 @@
         <form action="/tweets" method="post" enctype="application/x-www-form-urlencoded">
           <span>
             <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text" class="tweet-message"></textarea>
+            <textarea name="text" id="tweet-text" class="tweet-text"></textarea>
           </span>
           <div>
             <button type="submit">Tweet</button>
@@ -67,12 +67,11 @@
       <section class="timeline">
         <article class="tweet">
           <header>
-            <span>
-              <img src="https://i.imgur.com/73hZDYK.png"> Newton
+            <span class="tweet-user">
+              <span><img src="https://i.imgur.com/73hZDYK.png"></span>
+              <span>Newton</span>
             </span>
-            <span>
-              @SirIsaac
-            </span>
+            <span class="tweet-username">@SirIsaac</span>
           </header>
           <section class="tweet-message">
             <span>
@@ -84,9 +83,9 @@
               10 days ago
             </span>
             <span>
-              <i class="fa-solid fa-flag fa-sm"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-sharp fa-solid fa-heart fa-sm"></i>
+              <i class="fa-solid fa-flag fa-lg"></i>
+              <i class="fa-solid fa-retweet fa-lg"></i>
+              <i class="fa-sharp fa-solid fa-heart fa-lg"></i>
             </span>
           </footer>
         </article>

@@ -7,6 +7,7 @@ padding-top: 40px;
   flex-direction: column;
   border: 3px;
   border-style: groove;
+  border-color: black;
   padding: 1em;
 }
 
@@ -16,6 +17,12 @@ padding-top: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.tweet header img{
+  max-height: 50px;
+  padding-right: 0.5em;
 }
 
 .tweet footer {
@@ -25,4 +32,41 @@ padding-top: 40px;
   flex-direction: row;
   justify-content: space-between;
   font-size: small;
+  padding: 1em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.tweet footer i {
+  padding-right: 0.5em;
+}
+
+.tweet-message {
+  background: none;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom-width: 3px;
+  border-bottom-style: groove;
+  border-color: black;
+  outline: none;
+  resize: none;
+  font-size: large;
+  font-weight: bold;
+  padding: 1em;
+  width: 100%;
+  margin: auto;
+}
+
+.tweet-user {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tweet-username {
+  color: rgb(206, 210, 219);
+  font-weight: bold;
 }
