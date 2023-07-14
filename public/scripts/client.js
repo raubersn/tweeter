@@ -37,10 +37,21 @@ const renderTweets = (tweets) => {
   $('#tweets-container').append($tweetElements);
 };
 
+const loadTweets = () => {
+  //$.get("/tweets");
+
+  $.ajax('/tweets', { method: 'GET' })
+  .then(function (tweetsJSON) {
+    renderTweets(tweetsJSON);
+  });
+};
+
 $(document).ready(function() {
   $("#tweets-form").on("submit", function (event) {
     event.preventDefault();
 
     $.post($("#tweets-form").attr('action'), $("#tweets-form").serialize());
   })
+
+  loadTweets();
 });
