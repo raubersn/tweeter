@@ -9,6 +9,7 @@ padding-top: 40px;
   border-style: groove;
   border-color: black;
   padding: 1em;
+  margin-bottom: 20px;
 }
 
 .tweet:hover {
@@ -75,7 +76,7 @@ padding-top: 40px;
   justify-content: space-between;
 }
 
-.tweet-username {
+.tweet-handle {
   color: rgb(206, 210, 219);
   font-weight: bold;
 }
