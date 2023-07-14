@@ -11,6 +11,10 @@ padding-top: 40px;
   padding: 1em;
 }
 
+.tweet:hover {
+  box-shadow: 8px 8px 1px rgb(206, 210, 219);
+}
+
 .tweet header {
   width: 100%;
   margin: auto;
@@ -40,6 +44,11 @@ padding-top: 40px;
 
 .tweet footer i {
   padding-right: 0.5em;
+  color: #4056A1;
+}
+
+.tweet footer i:hover {
+  color: darkgoldenrod;
 }
 
 .tweet-message {
