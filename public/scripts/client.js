@@ -5,26 +5,35 @@
  */
 
 const createTweetElement = (tweet) => {
-return $(`<article class="tweet">
-          <header>
-            <span class="tweet-user">
-              <span><img src="${tweet.user.avatars}"></span>
-              <span>${tweet.user.name}</span>
-            </span>
-            <span class="tweet-handle">${tweet.user.handle}</span>
-          </header>
-          <section class="tweet-message">
-            <span>${tweet.content.text}</span>
-          </section>
-          <footer>
-            <span>${timeago.format(tweet.created_at)}</span>
-            <span>
-              <i class="fa-solid fa-flag fa-lg"></i>
-              <i class="fa-solid fa-retweet fa-lg"></i>
-              <i class="fa-sharp fa-solid fa-heart fa-lg"></i>
-            </span>
-          </footer>
-        </article>`);
+  const articleElement = $(`
+    <article class="tweet">
+      <header>
+        <span class="tweet-user">
+          <span><img src="${tweet.user.avatars}"></span>
+          <span>${tweet.user.name}</span>
+        </span>
+        <span class="tweet-handle">${tweet.user.handle}</span>
+      </header>
+    </article>`);
+
+  const sectionElement = $(`<section class="tweet-message"></section>`);
+  sectionElement.append(document.createTextNode(tweet.content.text));
+
+  articleElement.append(sectionElement);
+
+  const footerElement = $(`
+    <footer>
+      <span>${timeago.format(tweet.created_at)}</span>
+      <span>
+        <i class="fa-solid fa-flag fa-lg"></i>
+        <i class="fa-solid fa-retweet fa-lg"></i>
+        <i class="fa-sharp fa-solid fa-heart fa-lg"></i>
+      </span>
+    </footer>`);
+
+  articleElement.append(footerElement);
+  
+  return articleElement;
 };
 
 const renderTweets = (tweets) => {
