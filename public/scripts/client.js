@@ -48,8 +48,14 @@ $(document).ready(function() {
   $("#tweets-form").on("submit", function (event) {
     event.preventDefault();
 
-    $.post($("#tweets-form").attr('action'), $("#tweets-form").serialize());
-  })
+    if ($('#tweet-text').val() === "") {
+      alert("I can't see what are you humming about! Please, enter some text to proceed.");
+    } else if ($('#tweet-text').val().length > 140) {
+      alert("WOW, that's a lot! Please summarize your text below 140 characters.");
+    } else {
+      $.post($("#tweets-form").attr('action'), $("#tweets-form").serialize());
+    }
+  });
 
   loadTweets();
 });
