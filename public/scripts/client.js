@@ -30,8 +30,8 @@ return $(`<article class="tweet">
 const renderTweets = (tweets) => {
   const $tweetElements = [];
 
-  for (let tweet of tweets) {
-    $tweetElements.push(createTweetElement(tweet));  
+  for (let i = tweets.length -1; i >= 0; i--) {
+    $tweetElements.push(createTweetElement(tweets[i]));  
   }
 
   $('#tweets-container').append($tweetElements);
@@ -53,7 +53,17 @@ $(document).ready(function() {
     } else if ($('#tweet-text').val().length > 140) {
       alert("WOW, that's a lot! Please summarize your text below 140 characters.");
     } else {
-      $.post($("#tweets-form").attr('action'), $("#tweets-form").serialize());
+      $.post($("#tweets-form").attr('action'), $("#tweets-form").serialize())
+      .then(function() {
+        $('#tweet-text').val("");
+
+        $.ajax('/tweets', { method: 'GET' })
+        .then(function (tweetsJSON) {
+          $('#tweets-container').prepend(createTweetElement(tweetsJSON[tweetsJSON.length-1]));
+        });
+      });
+      
+      
     }
   });
 
