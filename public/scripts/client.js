@@ -56,6 +56,7 @@ $(document).ready(function() {
       $.post($("#tweets-form").attr('action'), $("#tweets-form").serialize())
       .then(function() {
         $('#tweet-text').val("");
+        $('.counter').val("140");
 
         $.ajax('/tweets', { method: 'GET' })
         .then(function (tweetsJSON) {
