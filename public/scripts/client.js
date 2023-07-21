@@ -57,10 +57,16 @@ $(document).ready(function() {
   $("#tweets-form").on("submit", function (event) {
     event.preventDefault();
 
+    $('.error-message').slideUp("fast","linear");
+
     if ($('#tweet-text').val() === "") {
-      alert("I can't see what are you humming about! Please, enter some text to proceed.");
+      $('.error-message').text('');
+      $('.error-message').append('<i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i> I can\'t see what are you humming about! Please, enter some text to proceed. <i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i>');
+      $('.error-message').slideDown("slow", "swing");
     } else if ($('#tweet-text').val().length > 140) {
-      alert("WOW, that's a lot! Please summarize your text below 140 characters.");
+      $('.error-message').text('');
+      $('.error-message').append('<i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i> WOW, that\'s a lot! Please summarize your text below 140 characters. <i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i>');
+      $('.error-message').slideDown("slow", "swing");
     } else {
       $.post($("#tweets-form").attr('action'), $("#tweets-form").serialize())
       .then(function() {
@@ -71,9 +77,7 @@ $(document).ready(function() {
         .then(function (tweetsJSON) {
           $('#tweets-container').prepend(createTweetElement(tweetsJSON[tweetsJSON.length-1]));
         });
-      });
-      
-      
+      });      
     }
   });
 
