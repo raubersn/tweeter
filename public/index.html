@@ -54,12 +54,13 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <div class="error-message"><i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i> Too long. Pls rspct our arbitrary limit of 140 chars. #kthxbye. <i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i></div>
         <form id="tweets-form" action="/tweets" method="post" enctype="application/x-www-form-urlencoded">
           <span>
             <label for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text" class="tweet-text"></textarea>
           </span>
-          <div>
+          <div class="tweet-controls">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>

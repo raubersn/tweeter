@@ -80,3 +80,18 @@ padding-top: 40px;
   color: rgb(206, 210, 219);
   font-weight: bold;
 }
+
+.error-message {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 15px;
+
+  border: 3px;
+  border-style: groove;
+  border-color: red;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  color: red;  
+}
