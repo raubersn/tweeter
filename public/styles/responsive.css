@@ -1,0 +1,28 @@
+.responsive {
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+}
+
+
+@media (min-width: 1024px) {
+  .responsive {
+    flex-direction: row;
+  }
+
+  .main-header {
+    margin: 2em;
+    width: 30vw;    
+  }
+
+  .container {
+    padding: 2em;
+    padding-top: 0.5em;
+    width: 60vw;
+  }
+
+  nav {
+    background-image: none;
+    background-color: #4056A1;
+  }
+}
