@@ -1,10 +1,15 @@
+/*styles the container that will hold and adjust the header and the timeline according to the screen size*/
 .responsive {
   display: flex;
   flex-direction: column;
+  /*adds a distance from the top to accomodate the nav's fixed position*/
   padding-top: 120px;
 }
 
-
+/*
+  Changes the layout according to the screen size. 
+  A single column is presented for screen sizes below 1024, and two columns for screen size above.
+*/
 @media (min-width: 1024px) {
   .responsive {
     flex-direction: row;

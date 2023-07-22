@@ -12,6 +12,7 @@ padding-top: 40px;
   margin-bottom: 20px;
 }
 
+/*changes the tweet box appearance when the user hovers the mouse over it*/
 .tweet:hover {
   box-shadow: 8px 8px 1px rgb(206, 210, 219);
 }
@@ -48,6 +49,7 @@ padding-top: 40px;
   color: #4056A1;
 }
 
+/*changes the image appearance when the user hovers the mouse over it*/
 .tweet footer i:hover {
   color: darkgoldenrod;
 }
@@ -82,6 +84,7 @@ padding-top: 40px;
 }
 
 .error-message {
+  /*hides the error message container when it is first loaded*/
   display: none;
   flex-direction: row;
   width: 100%;

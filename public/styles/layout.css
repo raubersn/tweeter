@@ -17,6 +17,7 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
+  /*uses sans-serif if the preferred custom font is not available*/
   font-family: 'Source Sans 3', sans-serif;
   font-size: 24px;
 }

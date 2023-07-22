@@ -4,6 +4,7 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!--gives the browser instructions on how to control the page's dimensions and scaling-->
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
@@ -32,6 +33,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <!--imports functions to handle the time passed since a tweet was submitted-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
@@ -45,7 +47,9 @@
       </span>
     </nav>
 
+    <!-- section to controle the responsive layout  for screens over and below 1024 px-->
     <section class="responsive">
+      <!--header containing logged user information (to be dynamically updated on another version)-->
       <header class="main-header">
         <div>
             <img src="/images/profile-hex.png"> 
@@ -57,8 +61,10 @@
 
       <!-- Page-specific (main) content here -->
       <main class="container">
+        <!--section reserved for composing a new tweet-->
         <section class="new-tweet">
           <h2>Compose Tweet</h2>
+          <!--error message container (dynamically displayed)-->
           <div class="error-message"><i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i>  <i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i></div>
           <form id="tweets-form" action="/tweets" method="post" enctype="application/x-www-form-urlencoded">
             <span>
@@ -71,6 +77,7 @@
             </div>
           </form>
         </section>
+        <!--section for displaying tweets (timeline)-->
         <section class="timeline" id="tweets-container"></section>
       </main>
     </section>
