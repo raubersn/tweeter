@@ -21,7 +21,12 @@ The web page is responsive and will present a single-column layout for screens s
 
 ## Screenshots
 
+1. Layout for screens over 1024px wide
 !["Screenshot of the UI for screens bigger than 1024 px"](https://github.com/raubersn/tweeter/blob/master/docs/big-screen.jpg)
+
+2. Layout for screens below 1024px wide
 !["Screenshot of the UI for screens smaller than 1024 px"](https://github.com/raubersn/tweeter/blob/master/docs/small-screen.jpg)
+
+3. Validations
 !["Screenshot of the empty message validation"](https://github.com/raubersn/tweeter/blob/master/docs/empty-message.jpg)
 !["Screenshot of the message characters limit validation"](https://github.com/raubersn/tweeter/blob/master/docs/long-message.jpg)
